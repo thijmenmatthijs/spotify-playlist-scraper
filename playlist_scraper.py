@@ -1,3 +1,4 @@
+import os
 from mysql.connector import connect, Error
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
