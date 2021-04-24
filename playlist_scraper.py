@@ -1,8 +1,6 @@
 from mysql.connector import connect, Error
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials, SpotifyOAuth
-from dotenv import load_dotenv
-load_dotenv()
 
 # ---------- Playlist URI's ----------
 rr = 'spotify:playlist:37i9dQZEVXbeXrGsbZu97Y'
