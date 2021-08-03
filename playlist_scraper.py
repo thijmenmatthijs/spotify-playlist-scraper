@@ -2,8 +2,8 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
 from mysql.connector import connect, Error
 import os
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 # ---------- Playlist URI's ----------
 rr = 'spotify:playlist:37i9dQZEVXbeXrGsbZu97Y'
@@ -13,11 +13,9 @@ dm1 = 'spotify:playlist:37i9dQZF1E36Bn1AIzrRAZ'
 
 # ---------- Scrape info from playlists ----------
 
-
 def scraper(playlist):
     spotify = spotipy.Spotify(
-        client_credentials_manager=SpotifyClientCredentials()
-    )
+        client_credentials_manager=SpotifyClientCredentials())
 
     # response returns JSON-text. First element is the list of items.
     response = spotify.playlist_items(
@@ -46,7 +44,6 @@ def scraper(playlist):
             result.append([album_artist, artists, title, sp_uri, playlist_id])
 
     return result
-
 
 # ---------- Playlist-data to database ----------
 
