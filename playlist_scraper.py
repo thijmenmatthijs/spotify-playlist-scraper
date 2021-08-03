@@ -1,10 +1,9 @@
-import pprint
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
 from mysql.connector import connect, Error
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 # ---------- Playlist URI's ----------
 rr = 'spotify:playlist:37i9dQZEVXbeXrGsbZu97Y'
@@ -75,6 +74,6 @@ def save_to_db(data):
         print(e)
 
 
-# if __name__ == "__main__":
-#     save_to_db(scraper(rr))
-#     save_to_db(scraper(dw))
+if __name__ == "__main__":
+    save_to_db(scraper(rr))
+    save_to_db(scraper(dw))
