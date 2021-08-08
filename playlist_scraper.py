@@ -12,7 +12,6 @@ dm1 = 'spotify:playlist:37i9dQZF1E36Bn1AIzrRAZ'
 
 
 # ---------- Scrape info from playlists ----------
-
 def scraper(playlist):
     spotify = spotipy.Spotify(
         client_credentials_manager=SpotifyClientCredentials())
@@ -45,9 +44,8 @@ def scraper(playlist):
 
     return result
 
+
 # ---------- Playlist-data to database ----------
-
-
 def save_to_db(data):
     try:
         with connect(
